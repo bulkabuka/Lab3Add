@@ -1,5 +1,6 @@
 package com.leftbrained.lab3add
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
@@ -34,6 +35,11 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Invalid email format", Toast.LENGTH_SHORT)
                     .show()
                 return@OnClickListener
+            }
+            else {
+                Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT)
+                    .show()
+                startActivity(Intent(this, ProfileActivity::class.java).putExtra("login", log))
             }
         })
     }

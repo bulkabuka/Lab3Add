@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Lab3Add</string>
+    <string name="hintChanges">Для изменения полей, впишите в них нужные вам значения, а после подтвердите или отмените изменения</string>
 </resources>

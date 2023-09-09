@@ -25,14 +25,14 @@
                 android:elevation="4dp"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:background="@color/material_dynamic_primary50"
+                android:background="@color/primaryProfile"
                 android:src="@drawable/micro_scooter" />
         </com.google.android.material.card.MaterialCardView>
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:backgroundTint="@color/material_dynamic_primary50"
+        android:backgroundTint="@color/primaryProfile"
         app:cardCornerRadius="8dp"
         android:translationZ="-4dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -136,8 +136,8 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="220dp"
+                        android:foregroundTint="@color/primaryProfile"
                         android:layout_height="wrap_content"
-                        android:height="40dp"
                         android:hint="Фамилия" />
                 </com.google.android.material.textfield.TextInputLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -167,8 +167,8 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="220dp"
+                        android:foregroundTint="@color/primaryProfile"
                         android:layout_height="wrap_content"
-                        android:height="40dp"
                         android:hint="Имя" />
                 </com.google.android.material.textfield.TextInputLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -199,7 +199,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="220dp"
                         android:layout_height="wrap_content"
-                        android:height="40dp"
+                        android:foregroundTint="@color/primaryProfile"
                         android:hint="Отчество" />
                 </com.google.android.material.textfield.TextInputLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -230,7 +230,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="220dp"
                         android:layout_height="wrap_content"
-                        android:height="40dp"
+                        android:foregroundTint="@color/primaryProfile"
                         android:hint="Город" />
                 </com.google.android.material.textfield.TextInputLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -261,10 +261,14 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="220dp"
                         android:layout_height="wrap_content"
-                        android:height="40dp"
+                        android:foregroundTint="@color/primaryProfile"
                         android:hint="Email" />
                 </com.google.android.material.textfield.TextInputLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
 
             <TextView
                 style="@style/TextAppearance.Material3.LabelSmall"
@@ -283,14 +287,19 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:backgroundTint="@color/primaryProfile"
                     android:text="Подтвердить" />
 
                 <Button
                     style="@style/Widget.Material3.Button.OutlinedButton"
                     android:layout_width="match_parent"
+                    android:textColor="@color/primaryProfile"
                     android:layout_height="match_parent"
                     android:text="Отменить" />
             </LinearLayout>
+            <View android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 </RelativeLayout>

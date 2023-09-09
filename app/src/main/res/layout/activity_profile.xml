@@ -44,6 +44,7 @@
             android:layout_height="match_parent">
 
             <LinearLayout
+                android:layout_marginHorizontal="24dp"
                 android:id="@+id/linearLayout3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -75,6 +76,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
+                android:layout_marginHorizontal="24dp"
                 android:padding="6dp"
                 app:layout_constraintBottom_toBottomOf="parent">
 

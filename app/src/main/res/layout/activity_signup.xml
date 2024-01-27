@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   xmlns:tools="http://schemas.android.com/tools"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="match_parent"
-                                                   tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupActivity">
 
     <ImageView
-        android:layout_width="wrap_content"
         android:id="@+id/imageView2"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/launchscreen"/>
+        android:src="@drawable/launchscreen" />
 
     <LinearLayout
         android:layout_marginTop="64dp"
@@ -43,12 +43,48 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mailField"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            app:boxBackgroundColor="@color/material_dynamic_primary95"
+            app:boxStrokeColor="@color/material_dynamic_primary50"
+            app:hintTextColor="@color/material_dynamic_primary50"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView2">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/passField"
             style="@style/Widget.Material3.TextInputLayout.FilledBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Password"
             android:maxWidth="180dp"
+            android:layout_marginBottom="24dp"
+            app:boxBackgroundColor="@color/material_dynamic_primary95"
+            app:boxStrokeColor="@color/material_dynamic_primary50"
+            app:hintTextColor="@color/material_dynamic_primary50"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="220dp"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passCompleteField"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:hint="Password Confirm"
             app:boxBackgroundColor="@color/material_dynamic_primary95"
             app:boxStrokeColor="@color/material_dynamic_primary50"
             app:hintTextColor="@color/material_dynamic_primary50"
@@ -58,7 +94,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="220dp"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <ImageView
@@ -67,7 +104,7 @@
             android:layout_marginTop="8dp"
             android:background="@color/material_dynamic_tertiary95"
             android:padding="8dp"
-            android:src="@drawable/google"/>
+            android:src="@drawable/google" />
     </LinearLayout>
 
     <LinearLayout
@@ -82,20 +119,20 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <Button
-            android:id="@+id/buttonLog"
+            android:id="@+id/signButton"
             android:backgroundTint="@color/material_dynamic_primary70"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:width="100dp"
-            android:text="Log In"/>
+            android:text="Sign Up" />
         <Button
-            android:id="@+id/buttonSign"
+            android:id="@+id/backButton"
             android:backgroundTint="@color/material_dynamic_primary70"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:width="100dp"
-            android:text="Sign Up"/>
+            android:text="Back" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

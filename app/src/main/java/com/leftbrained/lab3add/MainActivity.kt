@@ -18,6 +18,12 @@ class MainActivity : AppCompatActivity() {
         val login = findViewById<TextInputLayout>(R.id.loginField)
         val pass = findViewById<TextInputLayout>(R.id.passField)
         val logBtn = findViewById<Button>(R.id.buttonLog)
+        val signBtn = findViewById<Button>(R.id.buttonSign)
+
+        signBtn.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this, SignupActivity::class.java)
+            startActivity(intent)
+        })
 
         logBtn.setOnClickListener(View.OnClickListener {
             val log: String = login.editText?.text.toString()
@@ -39,7 +45,7 @@ class MainActivity : AppCompatActivity() {
             else {
                 Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT)
                     .show()
-                startActivity(Intent(this, ProfileActivity::class.java).putExtra("login", log))
+                startActivity(Intent(this, ProfileScreen::class.java).putExtra("login", log))
             }
         })
     }
